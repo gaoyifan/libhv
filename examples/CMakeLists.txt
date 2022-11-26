@@ -8,6 +8,7 @@ list(APPEND EXAMPLES
     tcp_echo_server
     tcp_chat_server
     tcp_proxy_server
+    tcp_transparent_proxy
     udp_echo_server
     udp_proxy_server
     socks5_proxy_server
@@ -43,6 +44,9 @@ target_link_libraries(tcp_chat_server ${HV_LIBRARIES})
 
 add_executable(tcp_proxy_server tcp_proxy_server.c)
 target_link_libraries(tcp_proxy_server ${HV_LIBRARIES})
+
+add_executable(tcp_transparent_proxy tcp_transparent_proxy.c)
+target_link_libraries(tcp_transparent_proxy ${HV_LIBRARIES})
 
 add_executable(udp_echo_server udp_echo_server.c)
 target_link_libraries(udp_echo_server ${HV_LIBRARIES})
